@@ -8,4 +8,4 @@ Curso : Ciência da Computação (Data: 2018-2)
 
 Disciplina : 4645P-02 - Disciplina Integradora I (Prof. Julio Machado)
 
-Alunos: Debora Fritscher Pires, Vinícius Azevedo @viniciusaz
+Alunos: Debora Fritscher Pires @DePires, Vinícius Azevedo @viniciusaz
