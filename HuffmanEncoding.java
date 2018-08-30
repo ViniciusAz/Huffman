@@ -128,7 +128,7 @@ public class HuffmanEncoding {
 
 		ft = frequencyTable;
 		bt = buildBinTree();
-		ct = new Hashtable<Character, String>
+		ct = new Hashtable<Character, String>();
 
 	}
 
@@ -197,8 +197,21 @@ public class HuffmanEncoding {
 	}
 
 
-	public Hashtable codeTable() {
-		return codedTable;
+	//Chamada do metodo para receber uma hashtable do caracter e codigo
+	public Hashtable<Character, String> codeTable() {
+		codeTableAux(bt.getRoot(),"");
+		return ct;
 	}
 
+	//Método auxiliar para criar o hashtable baseado nas informações da BinTree
+	private void codeTableAux(Node n, String code){
+
+		if(n.getLeftChild() == null && n.getRightChild() == null){
+			ct.put(n.character,code);
+			return;
+		}
+
+		codeTableAux(n.getLeftChild(), code+"0");
+		codeTableAux(n.getRightChild(), code+"1");
+	}
 }

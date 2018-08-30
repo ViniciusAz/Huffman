@@ -13,12 +13,21 @@ public class App {
 		//Recebe a tabela de frequencia de caracteres e cria a codificação correspondente
 		HuffmanEncoding hf = new HuffmanEncoding(table.get());
 
-		hf.printEncoding();
+		// hf.printEncoding();
+
+		//Criei o gerador
+		Gerador g = new Gerador();
+
+		// System.out.println(g.codifica(hf.codeTable(), io.read(args[0])));
+
+		io.write("text2", g.codifica(hf.codeTable(), io.read(args[0])));
+
+
 
 		//Recebe o texto e a codificação e gera o texto novo
-GERADOR =HuffmanEncoding (recebe um hashtable CHAR + CODIGO)
-USAR O GERADOR PARA MONTAR O TEXTO
-DATAIO CRIA TXT DO GERADOR (STRING)
+// GERADOR =HuffmanEncoding (recebe um hashtable CHAR + CODIGO)
+// USAR O GERADOR PARA MONTAR O TEXTO
+// DATAIO CRIA TXT DO GERADOR (STRING)
 
 		//Recebe um texto codificado e volta ao normal
 

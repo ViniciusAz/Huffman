@@ -4,6 +4,7 @@ import java.io.*;
 public class DataIO {
 
   FileReader fr;
+  FileWriter fw;
 
   public DataIO() {
   }
@@ -21,10 +22,10 @@ public class DataIO {
     return texto;
   }
 
-  public boolean write(String file, String texto) throws Exception{
-    //TO DO
-    return false;
+  public void write(String file, String texto) throws Exception{
+    fw = new FileWriter(new File(file+"x"));
+    fw.write(texto);
+    fw.close();
   }
-
 
 }
