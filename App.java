@@ -1,25 +1,26 @@
 import java.util.Hashtable;
-import java.io.*;
 
 public class App {
 
 	public static void main(String[] args) throws Exception {
 
-		FileReader fr = new FileReader(new File(args[0]));
-		String texto = "";
-		int i = fr.read();
-		while(i != -1)
-		{
-			texto += (char)i;
-			i = fr.read();
-		}
-		fr.close();
+		//Entrada e Saida do texto a ser Codificado
+		DataIO io = new DataIO();
 
-		FreqTable table = new FreqTable(texto);
+		//Recebe uma String (do texto) e gera uma tabela de frequencia de caracteres
+		FreqTable table = new FreqTable(io.read(args[0]));
 
-		HuffmanEncoding hf = new HuffmanEncoding(table.envia());
+		//Recebe a tabela de frequencia de caracteres e cria a codificação correspondente
+		HuffmanEncoding hf = new HuffmanEncoding(table.get());
 
 		hf.printEncoding();
+
+		//Recebe o texto e a codificação e gera o texto novo
+GERADOR =HuffmanEncoding (recebe um hashtable CHAR + CODIGO)
+USAR O GERADOR PARA MONTAR O TEXTO
+DATAIO CRIA TXT DO GERADOR (STRING)
+
+		//Recebe um texto codificado e volta ao normal
 
 	}
 

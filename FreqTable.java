@@ -20,7 +20,7 @@ public class FreqTable {
 		else table.put(s,table.get(s)+1);
 	}
 
-	public Hashtable<Character,Double> envia(){
+	public Hashtable<Character,Double> get(){
 		return table;
 	}
 }
