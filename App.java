@@ -16,9 +16,11 @@ public class App {
 		hf.printEncoding();
 
 		//Recebe o texto e a codificação e gera o texto novo
+GERADOR =HuffmanEncoding (recebe um hashtable CHAR + CODIGO)
+USAR O GERADOR PARA MONTAR O TEXTO
+DATAIO CRIA TXT DO GERADOR (STRING)
 
 		//Recebe um texto codificado e volta ao normal
-
 
 	}
 
