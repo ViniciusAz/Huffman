@@ -20,9 +20,9 @@ public class App {
 
 		// System.out.println(g.codifica(hf.codeTable(), io.read(args[0])));
 
-		io.write("text2", g.codifica(hf.codeTable(), io.read(args[0])));
+// io.write("textC", g.codifica(hf.codeTable(), io.read(args[0])));
 
-
+io.write("textD", g.decodifica(io.read(args[0])));
 
 		//Recebe o texto e a codificação e gera o texto novo
 // GERADOR =HuffmanEncoding (recebe um hashtable CHAR + CODIGO)
