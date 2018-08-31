@@ -1,4 +1,3 @@
-import java.util.Hashtable;
 
 public class App {
 
@@ -7,29 +6,14 @@ public class App {
 		//Entrada e Saida do texto a ser Codificado
 		DataIO io = new DataIO();
 
-		//Recebe uma String (do texto) e gera uma tabela de frequencia de caracteres
-		FreqTable table = new FreqTable(io.read(args[0]));
+		String arquivo = args[0];
 
-		//Recebe a tabela de frequencia de caracteres e cria a codificação correspondente
-		HuffmanEncoding hf = new HuffmanEncoding(table.get());
+		//Cria huffman lendo o arquivo
+		Huffman huff = new Huffman(io.read(arquivo));
 
-		// hf.printEncoding();
+		//Chama o gerador de saídas com parametro (nome do arquivo (novo) e aplica o huffman para o arquivo)
+		io.write((arquivo + "new"), huff.processa());
 
-		//Criei o gerador
-		Gerador g = new Gerador();
-
-		// System.out.println(g.codifica(hf.codeTable(), io.read(args[0])));
-
-// io.write("textC", g.codifica(hf.codeTable(), io.read(args[0])));
-
-io.write("textD", g.decodifica(io.read(args[0])));
-
-		//Recebe o texto e a codificação e gera o texto novo
-// GERADOR =HuffmanEncoding (recebe um hashtable CHAR + CODIGO)
-// USAR O GERADOR PARA MONTAR O TEXTO
-// DATAIO CRIA TXT DO GERADOR (STRING)
-
-		//Recebe um texto codificado e volta ao normal
 
 	}
 
